@@ -57,6 +57,10 @@ config.plugins = (webpackBase.plugins || []).concat(
         },
         // necessary to consistently work with multiple chunks via CommonsChunkPlugin
         chunksSortMode: 'dependency'
+    }),
+    new ExtractTextPlugin('css/[name].[hash].css'),
+    new webpack.optimize.CommonsChunkPlugin({
+        name: 'vendor'
     })
 )
 

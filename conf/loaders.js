@@ -1,6 +1,6 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-module.exports = [
+var loaders = [
     // JS
     {
         test: /\.js?$/,
@@ -18,20 +18,6 @@ module.exports = [
             ]
         }
     },
-    // less
-    {
-        test: /\.less?$/,
-        exclude: /(node_modules)/,
-        // loader: 'style!css!less!autoprefixer?browsers=last 2 version&remove=false'
-        loader: ExtractTextPlugin.extract('style', 'css!less!autoprefixer?browsers=last 2 version&remove=false')
-    },
-    // css
-    {
-        test: /\.css?$/,
-        exclude: /(node_modules)/,
-        // loader: 'style!css!autoprefixer?browsers=last 2 version&remove=false'
-        loader: ExtractTextPlugin.extract('style', 'css!autoprefixer?browsers=last 2 version&remove=false')
-    },
     // images
     {
         test: /\.(png|jpg)$/,
@@ -39,7 +25,39 @@ module.exports = [
     },
     // font
     {
-        test: /\.(eot|svg|ttf|woff)$/,
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
         loader: 'file-loader?name=fonts/[name].[ext]'
     }
 ]
+
+if (process.env.NODE_ENV !== 'production') {
+    loaders = loaders.concat([
+        // less
+        {
+            test: /\.less?$/,
+            exclude: /(node_modules)/,
+            loader: 'style!css!less!autoprefixer?browsers=last 2 version&remove=false'
+        },
+        // css
+        {
+            test: /\.css?$/,
+            exclude: /(node_modules)/,
+            loader: 'style!css!autoprefixer?browsers=last 2 version&remove=false'
+        }])
+} else {
+    loaders = loaders.concat([
+        // less
+        {
+            test: /\.less?$/,
+            exclude: /(node_modules)/,
+            loader: ExtractTextPlugin.extract('style', 'css!less!autoprefixer?browsers=last 2 version&remove=false')
+        },
+        // css
+        {
+            test: /\.css?$/,
+            exclude: /(node_modules)/,
+            loader: ExtractTextPlugin.extract('style', 'css!autoprefixer?browsers=last 2 version&remove=false')
+        }])
+}
+
+module.exports = loaders
