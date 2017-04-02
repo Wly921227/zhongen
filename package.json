@@ -47,6 +47,7 @@
     "react-router": "^2.8.1",
     "superagent": "^3.5.1",
     "superagent-no-cache": "^0.1.1",
-    "superagent-prefix": "0.0.2"
+    "superagent-prefix": "0.0.2",
+    "velocity-react": "^1.2.1"
   }
 }

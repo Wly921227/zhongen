@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>font</title>
+    <style>
+        /*声明 WebFont*/
+        @font-face {
+            font-family: 'FZCHY';
+            src: url('./fonts/FZCHY.ttf');
+            src: url('./fonts/FZCHY.eot?#font-spider') format('embedded-opentype'),
+            url('./fonts/FZCHY.woff') format('woff'),
+            url('./fonts/FZCHY.ttf') format('truetype'),
+            url('./fonts/FZCHY.svg') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /*使用选择器指定字体*/
+        .fzchy {
+            font-family: 'FZCHY';
+        }
+    </style>
+</head>
+<body>
+<div class="fzchy">
+    忠恩饲用产品手册
+</div>
+</body>
+</html>

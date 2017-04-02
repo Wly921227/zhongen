@@ -35,6 +35,11 @@ module.exports = [
     // images
     {
         test: /\.(png|jpg)$/,
-        loader: 'url?limit=1000000'   // 单位b
+        loader: 'url?limit=8192'   // 单位b
+    },
+    // font
+    {
+        test: /\.(eot|svg|ttf|woff)$/,
+        loader: 'file-loader?name=fonts/[name].[ext]'
     }
 ]
