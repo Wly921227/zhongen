@@ -13,14 +13,14 @@ const config = {
         }
     },
     childRoutes: [
-        // {
-        //     // path: '/test',
-        //     // getComponent: (nextState, callback) => {
-        //     //     require.ensure([], (require) => {
-        //     //         callback(null, require('pages/TestUser'))
-        //     //     }, 'TestUser')
-        //     // }
-        // }
+        {
+            path: '/*',
+            getComponent: (nextState, callback) => {
+                require.ensure([], (require) => {
+                    callback(null, require('common/components/404'))
+                }, '404')
+            }
+        }
     ]
 }
 
