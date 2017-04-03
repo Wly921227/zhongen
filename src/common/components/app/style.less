@@ -3,7 +3,12 @@
   flex-direction: column;
   height: 100%;
   .body {
-    flex: 1 1 auto;
+    flex: 1;
+    .content {
+      width: 1200px;
+      margin: auto;
+      background: #fff;
+    }
   }
   .column-mid {
     display: flex;
@@ -13,5 +18,5 @@
 
 #main {
   background: rgb(34, 149, 90);
-  height: 100%;
+  min-height: 100%;
 }

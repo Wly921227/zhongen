@@ -1,5 +1,5 @@
 .footer {
-  flex: 0 0 auto;
+  flex: 0 0 120px;
   padding: 50px 0;
   background: rgb(44, 46, 47);
   color: #fff;
@@ -9,16 +9,28 @@
   .center {
     text-align: center;
     display: inline-block;
-    .footer-row {
-      margin-bottom: 5px;
-      cursor: default;
-      i {
-        margin-right: 5px;
+    width: 1200px;
+    .right {
+      float: right;
+      .qr-code {
+        width: 80px;
+        height: auto;
       }
-      a {
-        color: #fff;
-        cursor: pointer;
-        text-decoration: none;
+    }
+    .left {
+      text-align: left;
+      float: left;
+      .footer-row {
+        margin-bottom: 5px;
+        cursor: default;
+        i {
+          margin-right: 5px;
+        }
+        a {
+          color: #fff;
+          cursor: pointer;
+          text-decoration: none;
+        }
       }
     }
   }
