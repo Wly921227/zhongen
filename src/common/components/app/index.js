@@ -13,9 +13,9 @@ class App extends React.Component {
         return <div className="app">
             <Header path={path}/>
             <div className="body">
-                <section>
+                <div className="content">
                     {this.props.children}
-                </section>
+                </div>
             </div>
             <Footer/>
         </div>
