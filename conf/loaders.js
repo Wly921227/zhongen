@@ -21,7 +21,7 @@ var loaders = [
     // images
     {
         test: /\.(png|jpg)$/,
-        loader: 'url?limit=8192'   // 单位b
+        loader: 'url?limit=8192&name=images/[name].[ext]'   // 单位b
     },
     // font
     {
