@@ -14,6 +14,14 @@ const config = {
     },
     childRoutes: [
         {
+            path: 'about',
+            getComponent: (nextState, callback) => {
+                require.ensure([], (require) => {
+                    callback(null, require('pages/aboutus'))
+                }, 'about')
+            }
+        },
+        {
             path: '/*',
             getComponent: (nextState, callback) => {
                 require.ensure([], (require) => {

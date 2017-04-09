@@ -8,7 +8,7 @@ const Footer = require('./footer')
 class App extends React.Component {
 
     render() {
-        let path = this.props.route.path
+        let path = this.props.location.pathname
 
         return <div className="app">
             <Header path={path}/>
