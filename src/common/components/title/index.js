@@ -1,11 +1,21 @@
 require('./style.less')
 
 const React = require('react')
+const {Link} = require('react-router')
 
 class Title extends React.Component {
     render() {
-        return <div className="title">
-            {this.props.text}
+        let {
+            text,
+            link
+        } = this.props
+
+        return <div className="item-title">
+            {text}
+            {link ? (<div className="link">
+                    <Link to={link}>更多<i></i></Link>
+                </div>) : null
+            }
         </div>
     }
 }
