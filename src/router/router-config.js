@@ -22,6 +22,14 @@ const config = {
             }
         },
         {
+            path: 'product/:item',
+            getComponent: (nextState, callback) => {
+                require.ensure([], (require) => {
+                    callback(null, require('pages/product'))
+                }, 'product')
+            }
+        },
+        {
             path: '/*',
             getComponent: (nextState, callback) => {
                 require.ensure([], (require) => {

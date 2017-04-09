@@ -12,7 +12,7 @@ const nav = [
         title: '首页'
     },
     {
-        path: '/product',
+        path: '/product/0',
         title: '产品'
     },
     {
@@ -53,9 +53,13 @@ class Header extends React.Component {
         } = this.props
 
         let navDom = nav.map((value, key) => {
-            return <li key={key} className={value.path === path ? 'active' : ''}>
+            if (path.indexOf('product') > -1) {
+                path = '/product/0'
+            }
+
+            return <li key={key} className={path === value.path ? 'active' : ''}>
                 <Link to={value.path}>
-                    <span ref={value.path === path ? 'linked' : ''}
+                    <span ref={path === value.path ? 'linked' : ''}
                           onMouseOver={this.moveUnderline.bind(this)}
                           onMouseOut={this.disableUnderline.bind(this)}>{value.title}</span>
                 </Link>

@@ -21,11 +21,11 @@ class Home extends React.Component {
     render() {
         return <div className="home">
             <Banner list={banners}/>
-            <div className="product home-item">
+            <div className="home-item">
                 <Title text="毒清饲用天然植物粉" link="/product"/>
                 <Product type="row"/>
             </div>
-            <div className="material home-item">
+            <div className="home-item">
                 <Title text="天然植物原料"/>
                 <Material/>
             </div>

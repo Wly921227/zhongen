@@ -1,0 +1,23 @@
+@green: #37c386;
+
+.p-list {
+  width: 100%;
+  a:hover {
+    text-decoration: none;
+  }
+  .item {
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    color: @green;
+    &.active {
+      background: @green;
+      color: #fff;
+    }
+    &:hover {
+      background: @green;
+      color: #fff;
+    }
+  }
+}
