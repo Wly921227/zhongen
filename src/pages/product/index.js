@@ -170,9 +170,10 @@ class Product extends React.Component {
             return value.item
         })
 
+        let minHeight = window.innerHeight - 100 - 120
         let rightContent = data[parseInt(item)]
 
-        return (<div className="product">
+        return (<div className="product" style={{minHeight: minHeight}}>
             <div className="left-list">
                 <PList list={leftList} item={item}/>
             </div>
