@@ -4,6 +4,8 @@ const React = require('react')
 const PList = require('./productList')
 const PContent = require('./productContent')
 
+import {setMinHeight} from 'common/utils'
+
 let data = [
     {
         item: '鸡瘟毒清饲用',
@@ -172,6 +174,11 @@ let data = [
 ]
 
 class Product extends React.Component {
+
+    componentDidMount() {
+        setMinHeight()
+    }
+
     render() {
         let {
             item

@@ -30,6 +30,14 @@ const config = {
             }
         },
         {
+            path: 'profile',
+            getComponent: (nextState, callback) => {
+                require.ensure([], (require) => {
+                    callback(null, require('pages/profile'))
+                }, 'profile')
+            }
+        },
+        {
             path: '/*',
             getComponent: (nextState, callback) => {
                 require.ensure([], (require) => {

@@ -7,5 +7,9 @@ module.exports = {
         }
 
         return '?' + param.substr(0, param.length - 1)
+    },
+    setMinHeight () {
+        let minHeight = window.innerHeight - 220
+        document.querySelector('#main .content').style.minHeight = minHeight + 'px'
     }
 }

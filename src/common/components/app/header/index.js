@@ -16,6 +16,10 @@ const nav = [
         title: '产品'
     },
     {
+        path: '/profile',
+        title: '公司简介'
+    },
+    {
         path: '/about',
         title: '关于我们'
     }

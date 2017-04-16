@@ -8,7 +8,7 @@ class Price extends React.Component {
         } = this.props
 
         return (<div className="price">
-            <span className="num">{price}元</span>/公斤
+            建议零售价：<span className="num">{price}元</span> /公斤
         </div>)
     }
 }
