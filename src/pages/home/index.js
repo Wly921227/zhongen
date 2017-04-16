@@ -9,7 +9,11 @@ const Product = require('common/components/products')
 
 const banner1 = require('images/banner1.png')
 const banner2 = require('images/banner2.png')
+const banner3 = require('images/banner3.png')
 const banners = [{
+    id: 2,
+    src: banner3
+}, {
     id: 0,
     src: banner1
 }, {
@@ -22,7 +26,7 @@ class Home extends React.Component {
         return <div className="home">
             <Banner list={banners}/>
             <div className="home-item">
-                <Title text="毒清饲用天然植物粉" link="/product/0"/>
+                <Title text="毒清饲用天然植物粉"/>
                 <Product type="row"/>
             </div>
             <div className="home-item">

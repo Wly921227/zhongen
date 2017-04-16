@@ -2,6 +2,7 @@ require('./style.less')
 
 const React = require('react')
 const Title = require('common/components/title')
+const Price = require('common/components/price')
 
 class ProductContent extends React.Component {
 
@@ -20,6 +21,7 @@ class ProductContent extends React.Component {
 
         return (<div className="p-content">
             <Title text={content.title}/>
+            <Price price={content.price}/>
             <div className="text">
                 <div className="h3">{content.desc.title}</div>
                 {this.getContentText(content.desc.text)}

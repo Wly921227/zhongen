@@ -2,7 +2,6 @@ var path = require('path')
 var loaders = require('./loaders')
 
 var webpack = require('webpack')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
     entry: {
