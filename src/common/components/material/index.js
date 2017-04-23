@@ -3,18 +3,18 @@ require('./style.less')
 const React = require('react')
 
 let imgList = [
-    {id: 0, text: '白芍', img: require('images/baishao.png')},
-    {id: 1, text: '白术', img: require('images/baishu.png')},
-    {id: 2, text: '茯苓', img: require('images/fucen.png')},
-    {id: 3, text: '杜仲', img: require('images/duzhong.png')},
-    {id: 4, text: '川芎', img: require('images/chuangong.png')},
-    {id: 5, text: '党参', img: require('images/dangshen.png')},
-    {id: 6, text: '干姜', img: require('images/ganjiang.png')},
-    {id: 7, text: '甘草', img: require('images/gancao.png')},
-    {id: 8, text: '葛根', img: require('images/gegen.png')},
-    {id: 9, text: '厚朴', img: require('images/houpu.png')},
-    {id: 10, text: '黄芪', img: require('images/huangshi.png')},
-    {id: 11, text: '金银花', img: require('images/jinyinhua.png')},
+    {id: 0, text: '白芍', img: require('images/baishao.jpg')},
+    {id: 1, text: '白术', img: require('images/baishu.jpg')},
+    {id: 2, text: '茯苓', img: require('images/fucen.jpg')},
+    {id: 3, text: '杜仲', img: require('images/duzhong.jpg')},
+    {id: 4, text: '川芎', img: require('images/chuangong.jpg')},
+    {id: 5, text: '党参', img: require('images/dangshen.jpg')},
+    {id: 6, text: '干姜', img: require('images/ganjiang.jpg')},
+    {id: 7, text: '甘草', img: require('images/gancao.jpg')},
+    {id: 8, text: '葛根', img: require('images/gegen.jpg')},
+    {id: 9, text: '厚朴', img: require('images/houpu.jpg')},
+    {id: 10, text: '黄芪', img: require('images/huangshi.jpg')},
+    {id: 11, text: '金银花', img: require('images/jinyinhua.jpg')},
 ]
 
 class Material extends React.Component {

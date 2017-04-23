@@ -7,9 +7,9 @@ const Material = require('common/components/material')
 const Title = require('common/components/title')
 const Product = require('common/components/products')
 
-const banner1 = require('images/banner1.png')
-const banner2 = require('images/banner2.png')
-const banner3 = require('images/banner3.png')
+const banner1 = require('images/banner1.jpg')
+const banner2 = require('images/banner2.jpg')
+const banner3 = require('images/banner3.jpg')
 const banners = [{
     id: 2,
     src: banner3
